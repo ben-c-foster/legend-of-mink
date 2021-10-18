@@ -4,6 +4,15 @@ namespace SpriteKind {
     export const HOuse = SpriteKind.create()
     export const Shield = SpriteKind.create()
 }
+/**
+ * 0- Up 
+ * 
+ * 1- Right
+ * 
+ * 2- Left
+ * 
+ * 3- Down
+ */
 function Walk () {
     if (LastDirection == 0) {
         animation.runImageAnimation(
@@ -313,15 +322,6 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 0
     Walk()
 })
-/**
- * 0- Up 
- * 
- * 1- Right
- * 
- * 2- Left
- * 
- * 3- Down
- */
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (LastDirection == 1) {
         animation.runImageAnimation(
@@ -1004,6 +1004,9 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 2
     Walk()
 })
+statusbars.onZero(StatusBarKind.Health, function (status) {
+    game.over(false)
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 1
     Walk()
@@ -1034,9 +1037,16 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 3
     Walk()
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+	
+})
 sprites.onDestroyed(SpriteKind.Timer, function (sprite) {
     animation.stopAnimation(animation.AnimationTypes.All, Hero)
     Walk()
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    statusbars.getStatusBarAttachedTo(StatusBarKind.Health, Hero).value += -15
+    otherSprite.destroy()
 })
 let MOving = false
 let Time: Sprite = null
@@ -1109,7 +1119,6 @@ Sword = sprites.create(img`
 let statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(Hero)
 statusbar.setLabel("HP")
-statusbar.setBarBorder(3, 2)
 let House2 = sprites.create(img`
     ....................e2e22e2e....................
     .................222eee22e2e222.................
@@ -1332,6 +1341,32 @@ Sheild = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Shield)
+let mySprite = sprites.create(img`
+    ........................
+    ........................
+    ........................
+    ........................
+    ..........ffff..........
+    ........ff1111ff........
+    .......fb111111bf.......
+    .......f11111111f.......
+    ......fd11111111df......
+    ......fd11111111df......
+    ......fddd1111dddf......
+    ......fbdbfddfbdbf......
+    ......fcdcf11fcdcf......
+    .......fb111111ffff.....
+    ......fffcdb1bc111cf....
+    ....fc111cbfbf1b1b1f....
+    ....f1b1b1ffffbfbfbf....
+    ....fbfbfffffff.........
+    .........fffff..........
+    ..........fff...........
+    ........................
+    ........................
+    ........................
+    ........................
+    `, SpriteKind.Enemy)
 game.onUpdate(function () {
     MOving = controller.down.isPressed() || (controller.left.isPressed() || (controller.right.isPressed() || controller.up.isPressed()))
     if (!(MOving)) {
@@ -1389,7 +1424,4 @@ game.onUpdate(function () {
     } else {
     	
     }
-})
-forever(function () {
-	
 })
