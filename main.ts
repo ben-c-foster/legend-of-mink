@@ -2,16 +2,8 @@ namespace SpriteKind {
     export const Timer = SpriteKind.create()
     export const Sword = SpriteKind.create()
     export const HOuse = SpriteKind.create()
+    export const Shield = SpriteKind.create()
 }
-/**
- * 0- Up 
- * 
- * 1- Right
- * 
- * 2- Left
- * 
- * 3- Down
- */
 function Walk () {
     if (LastDirection == 0) {
         animation.runImageAnimation(
@@ -320,6 +312,184 @@ function Walk () {
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 0
     Walk()
+})
+/**
+ * 0- Up 
+ * 
+ * 1- Right
+ * 
+ * 2- Left
+ * 
+ * 3- Down
+ */
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (LastDirection == 1) {
+        animation.runImageAnimation(
+        Sheild,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . f . f . . . . . . . . . . . 
+            . f e e e f . . . . . . . . . . 
+            f e e e e e f . . . . . . . . . 
+            f e e e e e e f . . . . . . . . 
+            f e e e e e e e f . . . . . . . 
+            f e e e e e e e e f . . . . . . 
+            f e e e e e e e e e f . . . . . 
+            f e e e e e e e e e f . . . . . 
+            f e e e e e e e e f . . . . . . 
+            f e e e e e e e f . . . . . . . 
+            f e e e e e e f . . . . . . . . 
+            f e e e e e f . . . . . . . . . 
+            . f e e e f . . . . . . . . . . 
+            . . f . f . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        500,
+        false
+        )
+    } else if (LastDirection == 2) {
+        animation.runImageAnimation(
+        Sheild,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . f . f . . 
+            . . . . . . . . . . f e e e f . 
+            . . . . . . . . . f e e e e e f 
+            . . . . . . . . f e e e e e e f 
+            . . . . . . . f e e e e e e e f 
+            . . . . . . f e e e e e e e e f 
+            . . . . . f e e e e e e e e e f 
+            . . . . . f e e e e e e e e e f 
+            . . . . . . f e e e e e e e e f 
+            . . . . . . . f e e e e e e e f 
+            . . . . . . . . f e e e e e e f 
+            . . . . . . . . . f e e e e e f 
+            . . . . . . . . . . f e e e f . 
+            . . . . . . . . . . . f . f . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        500,
+        false
+        )
+    } else if (LastDirection == 3) {
+        animation.runImageAnimation(
+        Sheild,
+        [img`
+            . . . f f f f f f f f f f . . . 
+            . . f e e e e e e e e e e f . . 
+            . f e e e e e e e e e e e e f . 
+            . . e e e e e e e e e e e e . . 
+            . f e e e e e e e e e e e e f . 
+            . . f e e e e e e e e e e f . . 
+            . . . f e e e e e e e e f . . . 
+            . . . . f e e e e e e f . . . . 
+            . . . . . f e e e e f . . . . . 
+            . . . . . . f e e f . . . . . . 
+            . . . . . . . f f . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        500,
+        false
+        )
+    } else if (LastDirection == 0) {
+        animation.runImageAnimation(
+        Sheild,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . f f . . . . . . . 
+            . . . . . . f e e f . . . . . . 
+            . . . . . f e e e e f . . . . . 
+            . . . . f e e e e e e f . . . . 
+            . . . f e e e e e e e e f . . . 
+            . . f e e e e e e e e e e f . . 
+            . f e e e e e e e e e e e e f . 
+            . . e e e e e e e e e e e e . . 
+            . f e e e e e e e e e e e e f . 
+            . . f e e e e e e e e e e f . . 
+            . . . f f f f f f f f f f . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        500,
+        false
+        )
+    } else {
+    	
+    }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (LastDirection == 1) {
@@ -871,6 +1041,7 @@ sprites.onDestroyed(SpriteKind.Timer, function (sprite) {
 let MOving = false
 let Time: Sprite = null
 let LastDirection = 0
+let Sheild: Sprite = null
 let Sword: Sprite = null
 let Hero: Sprite = null
 game.setDialogTextColor(2)
@@ -1143,6 +1314,24 @@ let House5 = sprites.create(img`
     ......6ccc666c66e4e44e44e44e44ee66c666ccc6......
     `, SpriteKind.HOuse)
 tiles.placeOnRandomTile(House5, sprites.castle.tileGrass2)
+Sheild = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Shield)
 game.onUpdate(function () {
     MOving = controller.down.isPressed() || (controller.left.isPressed() || (controller.right.isPressed() || controller.up.isPressed()))
     if (!(MOving)) {
@@ -1180,6 +1369,23 @@ game.onUpdate(function () {
     } else if (LastDirection == 3) {
         Sword.top = Hero.bottom
         Sword.x = Hero.x
+    } else {
+    	
+    }
+})
+game.onUpdate(function () {
+    if (LastDirection == 0) {
+        Sheild.bottom = Hero.top
+        Sheild.x = Hero.x
+    } else if (LastDirection == 1) {
+        Sheild.left = Hero.right
+        Sheild.y = Hero.y
+    } else if (LastDirection == 2) {
+        Sheild.right = Hero.left
+        Sheild.y = Hero.y
+    } else if (LastDirection == 3) {
+        Sheild.top = Hero.bottom
+        Sheild.x = Hero.x
     } else {
     	
     }
