@@ -322,175 +322,6 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 0
     Walk()
 })
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (LastDirection == 1) {
-        animation.runImageAnimation(
-        Sheild,
-        [img`
-            . . . . . . . . . . . . . . . . 
-            . . f . f . . . . . . . . . . . 
-            . f e e e f . . . . . . . . . . 
-            f e e e e e f . . . . . . . . . 
-            f e e e e e e f . . . . . . . . 
-            f e e e e e e e f . . . . . . . 
-            f e e e e e e e e f . . . . . . 
-            f e e e e e e e e e f . . . . . 
-            f e e e e e e e e e f . . . . . 
-            f e e e e e e e e f . . . . . . 
-            f e e e e e e e f . . . . . . . 
-            f e e e e e e f . . . . . . . . 
-            f e e e e e f . . . . . . . . . 
-            . f e e e f . . . . . . . . . . 
-            . . f . f . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `],
-        500,
-        false
-        )
-    } else if (LastDirection == 2) {
-        animation.runImageAnimation(
-        Sheild,
-        [img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . f . f . . 
-            . . . . . . . . . . f e e e f . 
-            . . . . . . . . . f e e e e e f 
-            . . . . . . . . f e e e e e e f 
-            . . . . . . . f e e e e e e e f 
-            . . . . . . f e e e e e e e e f 
-            . . . . . f e e e e e e e e e f 
-            . . . . . f e e e e e e e e e f 
-            . . . . . . f e e e e e e e e f 
-            . . . . . . . f e e e e e e e f 
-            . . . . . . . . f e e e e e e f 
-            . . . . . . . . . f e e e e e f 
-            . . . . . . . . . . f e e e f . 
-            . . . . . . . . . . . f . f . . 
-            . . . . . . . . . . . . . . . . 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `],
-        500,
-        false
-        )
-    } else if (LastDirection == 3) {
-        animation.runImageAnimation(
-        Sheild,
-        [img`
-            . . . f f f f f f f f f f . . . 
-            . . f e e e e e e e e e e f . . 
-            . f e e e e e e e e e e e e f . 
-            . . e e e e e e e e e e e e . . 
-            . f e e e e e e e e e e e e f . 
-            . . f e e e e e e e e e e f . . 
-            . . . f e e e e e e e e f . . . 
-            . . . . f e e e e e e f . . . . 
-            . . . . . f e e e e f . . . . . 
-            . . . . . . f e e f . . . . . . 
-            . . . . . . . f f . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `],
-        500,
-        false
-        )
-    } else if (LastDirection == 0) {
-        animation.runImageAnimation(
-        Sheild,
-        [img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . f f . . . . . . . 
-            . . . . . . f e e f . . . . . . 
-            . . . . . f e e e e f . . . . . 
-            . . . . f e e e e e e f . . . . 
-            . . . f e e e e e e e e f . . . 
-            . . f e e e e e e e e e e f . . 
-            . f e e e e e e e e e e e e f . 
-            . . e e e e e e e e e e e e . . 
-            . f e e e e e e e e e e e e f . 
-            . . f e e e e e e e e e e f . . 
-            . . . f f f f f f f f f f . . . 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `],
-        500,
-        false
-        )
-    } else {
-    	
-    }
-})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (LastDirection == 1) {
         animation.runImageAnimation(
@@ -1004,6 +835,9 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     LastDirection = 2
     Walk()
 })
+statusbars.onZero(StatusBarKind.EnemyHealth, function (status) {
+    Enemy12.destroy()
+})
 statusbars.onZero(StatusBarKind.Health, function (status) {
     game.over(false)
 })
@@ -1040,6 +874,9 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
 	
 })
+sprites.onOverlap(SpriteKind.Sword, SpriteKind.Enemy, function (sprite, otherSprite) {
+    statusbar2.value += -4
+})
 sprites.onDestroyed(SpriteKind.Timer, function (sprite) {
     animation.stopAnimation(animation.AnimationTypes.All, Hero)
     Walk()
@@ -1051,7 +888,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 let MOving = false
 let Time: Sprite = null
 let LastDirection = 0
-let Sheild: Sprite = null
+let statusbar2: StatusBarSprite = null
+let Enemy12: Sprite = null
 let Sword: Sprite = null
 let Hero: Sprite = null
 game.setDialogTextColor(2)
@@ -1220,7 +1058,7 @@ let HOuse4 = sprites.create(img`
     .....bdbbbdddcbbf3b33b33b33b33bebbcdddbbbdb.....
     ......bcccbbbcbbe3b33b33b33b33bebbcbbbcccb......
     `, SpriteKind.HOuse)
-tiles.placeOnRandomTile(HOuse4, sprites.castle.tileDarkGrass1)
+tiles.placeOnRandomTile(HOuse4, tiles.util.object0)
 let House3 = sprites.create(img`
     ....................8a8aa8a8....................
     .................aaa888aa8a8aaa.................
@@ -1271,7 +1109,7 @@ let House3 = sprites.create(img`
     .....bdbbbdddcbbf3b33b33b33b33bebbcdddbbbdb.....
     ......bcccbbbcbbe3b33b33b33b33bebbcbbbcccb......
     `, SpriteKind.HOuse)
-tiles.placeOnRandomTile(House3, sprites.castle.tileDarkGrass2)
+tiles.placeOnRandomTile(House3, tiles.util.object2)
 let House5 = sprites.create(img`
     ....................e2e22e2e....................
     .................222eee22e2e222.................
@@ -1322,8 +1160,59 @@ let House5 = sprites.create(img`
     .....64eee444c66f4e44e44e44e44ee66c444eee46.....
     ......6ccc666c66e4e44e44e44e44ee66c666ccc6......
     `, SpriteKind.HOuse)
-tiles.placeOnRandomTile(House5, sprites.castle.tileGrass2)
-Sheild = sprites.create(img`
+tiles.placeOnRandomTile(House5, tiles.util.object8)
+let House6 = sprites.create(img`
+    ....................e2e22e2e....................
+    .................222eee22e2e222.................
+    ..............222e22e2e22eee22e222..............
+    ...........e22e22eeee2e22e2eeee22e22e...........
+    ........eeee22e22e22e2e22e2e22e22e22eeee........
+    .....222e22e22eeee22e2e22e2e22eeee22e22e222.....
+    ...22eeee22e22e22e22eee22eee22e22e22e22eeee22...
+    4cc22e22e22eeee22e22e2e22e2e22e22eeee22e22e22cc4
+    6c6eee22e22e22e22e22e2e22e2e22e22e22e22e22eee6c6
+    46622e22eeee22e22eeee2e22e2eeee22e22eeee22e22664
+    46622e22e22e22eeee22e2e22e2e22eeee22e22e22e22664
+    4cc22eeee22e22e22e22eee22eee22e22e22e22eeee22cc4
+    6c622e22e22eeee22e22e2e22e2e22e22eeee22e22e226c6
+    466eee22e22e22e22e22e2e22e2e22e22e22e22e22eee664
+    46622e22eeee22e22e22e2e22e2e22e22e22eeee22e22664
+    4cc22e22e22e22e22eeee2e22e2eeee22e22e22e22e22cc4
+    6c622eeee22e22eeee22eee22eee22eeee22e22eeee226c6
+    46622e22e22eeee22e22e2e22e2e22e22eeee22e22e22664
+    466eee22e22e22e22e22e2e22e2e22e22e22e22e22eee664
+    4cc22e22eeee22e22e22e2e22e2e22e22e22eeee22e22cc4
+    6c622e22e22e22e22e22eee22eee22e22e22e22e22e226c6
+    46622eeee22e22e22eeecc6666cceee22e22e22eeee22664
+    46622e22e22e22eeecc6666666666cceee22e22e22e22664
+    4cceee22e22eeecc66666cccccc66666cceee22e22eeecc4
+    6c622e22eeecc66666cc64444446cc66666cceee22e226c6
+    46622e22cc66666cc64444444444446cc66666cc22e22664
+    46622cc6666ccc64444444444444444446ccc6666cc22664
+    4ccc6666ccc6444bcc666666666666ccb4446ccc6666ccc4
+    cccccccc6666666cb44444444444444bc6666666cccccccc
+    64444444444446c444444444444444444c64444444444446
+    66cb444444444cb411111111111111114bc444444444bc66
+    666cccccccccccd166666666666666661dccccccccccc666
+    6666444444444c116eeeeeeeeeeeeee611c4444444446666
+    666e2222222e4c16e4e44e44e44e44ee61c4e2222222e666
+    666eeeeeeeee4c16e4e44e44e44e44ee61c4eeeeeeeee666
+    666eddddddde4c66f4e4effffffe44ee66c4eddddddde666
+    666edffdffde4c66f4effffffffff4ee66c4edffdffde666
+    666edccdccde4c66f4effffffffffeee66c4edccdccde666
+    666eddddddde4c66f4eeeeeeeeeeeeee66c4eddddddde666
+    c66edffdffde4c66e4e44e44e44e44ee66c4edffdffde66c
+    c66edccdccde4c66e4e44e44e44e44ee66c4edccdccde66c
+    cc66666666664c66e4e44e44e44feeee66c46666666666cc
+    .c66444444444c66e4e44e44e44ffffe66c44444444466c.
+    ..c64eee4eee4c66f4e44e44e44f44fe66c4eee4eee46c..
+    ...c4eee4eee4c66f4e44e44e44effee66c4eee4eee4c...
+    ....644444444c66f4e44e44e44e44ee66c444444446....
+    .....64eee444c66f4e44e44e44e44ee66c444eee46.....
+    ......6ccc666c66e4e44e44e44e44ee66c666ccc6......
+    `, SpriteKind.HOuse)
+tiles.placeOnRandomTile(House5, tiles.util.object10)
+let Sheild = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -1341,7 +1230,7 @@ Sheild = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Shield)
-let mySprite = sprites.create(img`
+Enemy12 = sprites.create(img`
     ........................
     ........................
     ........................
@@ -1367,6 +1256,9 @@ let mySprite = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Enemy)
+tiles.placeOnRandomTile(Enemy12, sprites.builtin.forestTiles16)
+statusbar2 = statusbars.create(20, 4, StatusBarKind.EnemyHealth)
+statusbar2.attachToSprite(Enemy12)
 game.onUpdate(function () {
     MOving = controller.down.isPressed() || (controller.left.isPressed() || (controller.right.isPressed() || controller.up.isPressed()))
     if (!(MOving)) {
