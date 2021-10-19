@@ -1211,7 +1211,7 @@ let House6 = sprites.create(img`
     .....64eee444c66f4e44e44e44e44ee66c444eee46.....
     ......6ccc666c66e4e44e44e44e44ee66c666ccc6......
     `, SpriteKind.HOuse)
-tiles.placeOnRandomTile(House5, tiles.util.object10)
+tiles.placeOnRandomTile(House6, tiles.util.object10)
 let Sheild = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
